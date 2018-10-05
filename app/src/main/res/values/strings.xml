@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TallerMaterialClase</string>
+    <string name="action_settings">Settings</string>
+    <string name="agregarC">Agregar Carro</string>
+    <string name="listarC">Listado de Carros</string>
+    <string name="reporteC">Reportes sobre Carros</string>
+    <string name="titulo_agregar">AGREGAR CARRO</string>
+    <string name="placa">Ingrese la Placa</string>
+    <string name="color">Escoja un color</string>
+    <string name="marca">Escoja una marca</string>
+    <string name="precio">Ingrese el precio</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="limpiar">LIMPIAR</string>
+    <string name="error_placa">placa NO VALIDA</string>
+    <string name="error_marca">Por favor seleccione una marca</string>
+    <string name="error_precio">Por favor ingrese un precio</string>
+    <string name="error_2">Por favor seleccione un sexo</string>
+    <string name="guardadoE">"Carro Guardada Exitosamente"</string>
+
+    <string-array name="principal">
+        <item>@string/agregarC</item>
+        <item>@string/listarC</item>
+        <item>@string/reporteC</item>
+    </string-array>
+</resources>
