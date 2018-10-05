@@ -27,7 +27,7 @@ public class principal extends AppCompatActivity {
         lstP= findViewById(R.id.lstPersonas);
         carros = datos.obtener();
 
-        AdaptadorP adaptP = new AdaptadorP(carros);
+        AdaptadorP adaptP = new AdaptadorP(carros,this);
 
         llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -36,7 +36,7 @@ public class principal extends AppCompatActivity {
     }
 
     public void agregarPersona(View v){
-        i = new Intent(principal.this,AgregarCarro.class);
+        i = new Intent(principal.this, AgregarCarro.class);
         startActivity(i);
         finish();
     }

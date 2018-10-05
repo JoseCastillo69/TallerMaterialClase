@@ -3,11 +3,11 @@ package com.example.android.tallermaterialclase;
 public class Carro {
     private int foto;
     private String placa;
-    private String color;
-    private String marca;
+    private int color;
+    private int marca;
     private int precio;
 
-    public Carro(int foto, String placa, String color, String marca, int precio) {
+    public Carro(int foto, String placa, int color, int marca, int precio) {
         this.foto = foto;
         this.placa = placa;
         this.color = color;
@@ -31,19 +31,19 @@ public class Carro {
         this.placa = placa;
     }
 
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(int color) {
         this.color = color;
     }
 
-    public String getMarca() {
+    public int getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(int marca) {
         this.marca = marca;
     }
 
