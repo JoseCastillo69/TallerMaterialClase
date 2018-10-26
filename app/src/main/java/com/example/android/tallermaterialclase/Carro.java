@@ -1,18 +1,28 @@
 package com.example.android.tallermaterialclase;
 
 public class Carro {
+    private String id;
     private int foto;
     private String placa;
     private int color;
     private int marca;
     private int precio;
 
-    public Carro(int foto, String placa, int color, int marca, int precio) {
+    public Carro(String id, int foto, String placa, int color, int marca, int precio) {
+        this.id = id;
         this.foto = foto;
         this.placa = placa;
         this.color = color;
         this.marca = marca;
         this.precio = precio;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getFoto() {

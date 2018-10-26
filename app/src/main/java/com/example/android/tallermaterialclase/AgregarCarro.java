@@ -45,7 +45,7 @@ public class AgregarCarro extends Activity {
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opc2);
         cmbMarca.setAdapter(adapter);
 
-        //foto = findViewById(R.id.foto);
+        foto = findViewById(R.id.foto);
         fotos = new ArrayList<>();
         fotos.add(R.drawable.carro1);
         fotos.add(R.drawable.carro2);
@@ -61,31 +61,23 @@ public class AgregarCarro extends Activity {
     }
 
     public void guardar(View v){
-        String placa ="";
+        String placa, id;
         int foto, color, marca, precio;
         foto = this.fotoAleatoria();
 
-        if (validar()){
+        if (placaValida() && validar()){
+            id = datos.getId();
             placa = txtPlaca.getText().toString();
-
-
-                for (int i = 0; i < listaCarros.size(); i++) {
-                    if (listaCarros.get(i).getPlaca().equalsIgnoreCase(placa)) {
-                        Toast.makeText(this, getResources().getString(R.string.error_placaI), Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                }
             precio = Integer.parseInt(txtPrecio.getText().toString());
             color = cmbColor.getSelectedItemPosition();
             marca= cmbMarca.getSelectedItemPosition();
 
-            Carro c = new Carro(foto, placa, color, marca, precio);
+            Carro c = new Carro(id, foto, placa, color, marca, precio);
             c.NuevaC();
 
             Snackbar.make(v, getResources().getString(R.string.guardadoE), Snackbar.LENGTH_SHORT).show();
 
             borrar();
-
         }
     }
 
@@ -127,7 +119,7 @@ public class AgregarCarro extends Activity {
 
         if (o2 == 0) {
             Toast.makeText(this, getResources().getString(R.string.error_marca), Toast.LENGTH_SHORT).show();
-            cmbColor.requestFocus();
+            cmbMarca.requestFocus();
             return false;
         }
 
@@ -136,7 +128,44 @@ public class AgregarCarro extends Activity {
             txtPrecio.requestFocus();
             return false;
         }
+        if (Integer.parseInt(txtPrecio.getText().toString()) == 0) {
+            txtPrecio.setError(getResources().getString(R.string.error_precioCero));
+            txtPrecio.requestFocus();
+            return false;
+        }
         return true;
     }
+
+    public boolean placaValida(){
+        if (txtPlaca.getText().toString().isEmpty()) {
+            txtPlaca.setError(getResources().getString(R.string.error_placa));
+            txtPlaca.requestFocus();
+            return false;
+        }
+
+        if (txtPlaca.getText().toString().length() <6 || txtPlaca.getText().toString().length() > 6){
+            txtPlaca.setError(getResources().getString(R.string.error_placaI2));
+            txtPlaca.requestFocus();
+            return false;
+        }
+
+        for (int i = 0; i < listaCarros.size() ; i++) {
+            if (listaCarros.get(i).getPlaca().equalsIgnoreCase(txtPlaca.getText().toString())) {
+                txtPlaca.setError(getResources().getString(R.string.error_placaI1));
+                txtPlaca.requestFocus();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /*public boolean PlacaLetrasValida(){
+        for (int i = 0; i < listaCarros.size(); i++) {
+            if (txtPlaca.getText().charAt(i) == ){
+
+            }
+        }
+        return true;
+    }*/
 
 }

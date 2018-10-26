@@ -31,9 +31,9 @@ public class AdaptadorP extends RecyclerView.Adapter<AdaptadorP.CarroViewHolder>
         Carro c = carros.get(position);
         holder.foto.setImageResource(c.getFoto());
         holder.placa.setText(c.getPlaca());
-        holder.color.setText(contexto.getResources().getStringArray(R.array.s_color)[c.getColor()]);
+        holder.color.setText("Color: " + contexto.getResources().getStringArray(R.array.s_color)[c.getColor()]);
         holder.marca.setText(contexto.getResources().getStringArray(R.array.s_marca)[c.getMarca()]);
-        holder.precio.setText(""+ c.getPrecio());
+        holder.precio.setText("Precio $" + c.getPrecio());
 
     }
 

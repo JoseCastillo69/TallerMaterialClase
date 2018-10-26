@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TallerMaterialClase</string>
+    <string name="action_settings">Settings</string>
+    <string name="titulo_agregar">ADD CARS</string>
+    <string name="placa">Enter plate</string>
+    <string name="color">Choose a color</string>
+    <string name="marca">Choose a trademark</string>
+    <string name="precio">Enter price</string>
+    <string name="guardar">SAVE</string>
+    <string name="limpiar">CLEAN</string>
+    <string name="seleccione_c">Select a color</string>
+    <string name="color1">Black</string>
+    <string name="color2">White</string>
+    <string name="color3">Blue</string>
+    <string name="color4">Purple</string>
+    <string name="seleccione_m">Select a trademark</string>
+    <string name="marca1">Nissan</string>
+    <string name="marca2">Chevrolet</string>
+    <string name="marca3">Ford</string>
+    <string name="marca4">Volkswagen</string>
+    <string name="error_placa">Please enter a plate</string>
+    <string name="error_placaI">This plate ALREADY EXISTS \nPlease enter a different one</string>
+    <string name="error_placaI2">The plate must have EXACTLY 6 characters \n3 letters followed by 3 numbers</string>
+    <string name="error_color">Please select a color</string>
+    <string name="error_marca">Please select a trademark</string>
+    <string name="error_precio">Please enter a price</string>
+    <string name="error_precioCero">Price NOT VALID \nPlease enter a different one</string>
+    <string name="guardadoE">Car added successfully</string>
+</resources>

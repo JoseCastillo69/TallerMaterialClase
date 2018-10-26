@@ -18,13 +18,14 @@
     <string name="marca2">Chevrolet</string>
     <string name="marca3">Ford</string>
     <string name="marca4">Volkswagen</string>
-    <string name="error_placa">placa NO VALIDA</string>
-    <string name="error_placaI">Esta placa YA EXISTE, por favor digite una diferente</string>
-    <string name="error_carrovacio">No hay carros agregados</string>
+    <string name="error_placa">Por favor ingrese una placa</string>
+    <string name="error_placaI1">Esta placa YA EXISTE \nPor favor ingrese una diferente</string>
+    <string name="error_placaI2">La placa debe tener EXACTAMENTE 6 caracteres \n3 letras y 3 numeros</string>
     <string name="error_color">Por favor seleccione un color</string>
     <string name="error_marca">Por favor seleccione una marca</string>
     <string name="error_precio">Por favor ingrese un precio</string>
-    <string name="guardadoE">"Carro Guardada Exitosamente"</string>
+    <string name="error_precioCero">Precio NO VALIDO \nPor favor ingrese un valor diferente</string>
+    <string name="guardadoE">"Carro Guardado Exitosamente"</string>
 
     <string-array name="s_color">
         <item>@string/seleccione_c</item>
